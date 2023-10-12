@@ -1,5 +1,10 @@
-public class Hero {
+import java.util.Comparator;
 
+public class Hero implements Comparable<Hero> {
+    @Override
+    public int compareTo(Hero hero){
+        return this.getName().compareTo(hero.getName());
+    }
     // attributs
     private String name;
     private int age;
@@ -27,4 +32,6 @@ public class Hero {
     public void setAge(int age) {
         this.age = age;
     }
+
+
 }
